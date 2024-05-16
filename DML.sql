@@ -69,75 +69,36 @@ SELECT model_id FROM Rifle_Model_Table;
 
 -- Вставка данных в таблицу Price_Table для моделей винтовок
 INSERT INTO Price_Table (price_id, price, item_id, date_start, date_end)
-VALUES
-    (1, 1000, 1, '2024-01-01', '2024-12-31'),
-    (2, 1200, 2, '2024-01-01', '2024-12-31'),
-    (3, 1500, 3, '2024-01-01', '2024-12-31'),
-    (4, 1300, 4, '2024-01-01', '2024-12-31'),
-    (5, 1100, 5, '2024-01-01', '2024-12-31'),
-    (6, 2000, 6, '2024-01-01', '2024-12-31');
+SELECT model_id + 1000, 1000 + model_id * 100, model_id, '2024-01-01', '2024-12-31' FROM Rifle_Model_Table;
 
 -- Вставка данных в таблицу Item_Table из Muzzle_Break_Table
 INSERT INTO Item_Table (item_id)
-SELECT mb_id FROM Muzzle_Break_Table;
+SELECT mb_id + 10000 FROM Muzzle_Break_Table;
 
--- Вставка данных в таблицу Price_Table для глушителей
+-- Вставка данных в таблицу Price_Table для дульных устройств
 INSERT INTO Price_Table (price_id, price, item_id, date_start, date_end)
-VALUES
-    (7, 200, 1, '2024-01-01', '2024-12-31'),
-    (8, 300, 2, '2024-01-01', '2024-12-31'),
-    (9, 250, 3, '2024-01-01', '2024-12-31'),
-    (10, 150, 4, '2024-01-01', '2024-12-31'),
-    (11, 250, 5, '2024-01-01', '2024-12-31'),
-    (12, 200, 6, '2024-01-01', '2024-12-31'),
-    (13, 300, 7, '2024-01-01', '2024-12-31'),
-    (14, 350, 8, '2024-01-01', '2024-12-31');
+SELECT mb_id + 20000, 200 + mb_id * 50, mb_id + 10000, '2024-01-01', '2024-12-31' FROM Muzzle_Break_Table;
     
 -- Вставка данных в таблицу Item_Table из Mag_Table
 INSERT INTO Item_Table (item_id)
-SELECT mag_id FROM Mag_Table;
+SELECT mag_id + 200000 FROM Mag_Table;
 
 -- Вставка данных в таблицу Price_Table для магазинов
 INSERT INTO Price_Table (price_id, price, item_id, date_start, date_end)
-VALUES
-    (15, 20, 1, '2024-01-01', '2024-12-31'),
-    (16, 30, 2, '2024-01-01', '2024-12-31'),
-    (17, 40, 3, '2024-01-01', '2024-12-31'),
-    (18, 70, 4, '2024-01-01', '2024-12-31'),
-    (19, 25, 5, '2024-01-01', '2024-12-31'),
-    (20, 35, 6, '2024-01-01', '2024-12-31'),
-    (21, 60, 7, '2024-01-01', '2024-12-31');
+SELECT mag_id + 300000, 20 + mag_id * 5, mag_id + 200000, '2024-01-01', '2024-12-31' FROM Mag_Table;
 
 -- Вставка данных в таблицу Item_Table из Handguard_Table
 INSERT INTO Item_Table (item_id)
-SELECT hg_id FROM Handguard_Table;
+SELECT hg_id + 400000 FROM Handguard_Table;
 
 -- Вставка данных в таблицу Price_Table для каждого цевья
 INSERT INTO Price_Table (price_id, price, item_id, date_start, date_end)
-VALUES
-    (22, 50, 1, '2024-01-01', '2024-12-31'),
-    (23, 60, 2, '2024-01-01', '2024-12-31'),
-    (24, 70, 3, '2024-01-01', '2024-12-31'),
-    (25, 80, 4, '2024-01-01', '2024-12-31'),
-    (26, 90, 5, '2024-01-01', '2024-12-31'),
-    (27, 100, 6, '2024-01-01', '2024-12-31'),
-    (28, 110, 7, '2024-01-01', '2024-12-31');
+SELECT hg_id + 500000, 50 + hg_id * 10, hg_id + 400000, '2024-01-01', '2024-12-31' FROM Handguard_Table;
 
 -- Вставка данных в таблицу Item_Table из Tactical_Modification_Table
 INSERT INTO Item_Table (item_id)
-SELECT mod_id FROM Tactical_Modification_Table;
+SELECT mod_id + 600000 FROM Tactical_Modification_Table;
 
 -- Вставка данных в таблицу Price_Table для тактических модификаций
 INSERT INTO Price_Table (price_id, price, item_id, date_start, date_end)
-VALUES
-    (29, 80, 1, '2024-01-01', '2024-12-31'),
-    (30, 90, 2, '2024-01-01', '2024-12-31'),
-    (31, 100, 3, '2024-01-01', '2024-12-31'),
-    (32, 110, 4, '2024-01-01', '2024-12-31'),
-    (33, 120, 5, '2024-01-01', '2024-12-31'),
-    (34, 130, 6, '2024-01-01', '2024-12-31'),
-    (35, 140, 7, '2024-01-01', '2024-12-31'),
-    (36, 150, 8, '2024-01-01', '2024-12-31'),
-    (37, 160, 9, '2024-01-01', '2024-12-31'),
-    (38, 170, 10, '2024-01-01', '2024-12-31'),
-    (39, 180, 11, '2024-01-01', '2024-12-31');
+SELECT mod_id + 700000, 80 + mod_id * 10, mod_id + 600000, '2024-01-01', '2024-12-31' FROM Tactical_Modification_Table;
